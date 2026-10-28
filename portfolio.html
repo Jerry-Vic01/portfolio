@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — BitBrige Nexus</title>
+  <meta name="description" content="Selected projects by Jeremiah Ewere Victor — web apps, databases, and technical work." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="BitBrige Nexus logo" />
+        <!-- <div class="brand-text">
+          <span class="brand-name">BITBRIGE NEXUS</span>
+          <span class="brand-tagline">Connect · Build · Secure</span>
+        </div> -->
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-eyebrow">// Portfolio</span>
+      <h1 class="hero-title">
+        Things I've <span class="gradient">built</span>
+      </h1>
+      <p class="hero-sub">
+        A selection of projects — from finished products to works currently in progress.
+      </p>
+    </div>
+  </header>
+
+  <!-- ================= PORTFOLIO ================= -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          All <span class="filter-count" id="count-all">0</span>
+        </button>
+        <button class="filter-btn" data-filter="completed">
+          Completed <span class="filter-count" id="count-completed">0</span>
+        </button>
+        <button class="filter-btn" data-filter="in-progress">
+          In Progress <span class="filter-count" id="count-progress">0</span>
+        </button>
+      </div>
+
+      <!-- Project grid -->
+      <div class="project-grid" id="portfolio-grid">
+        <!-- filled by portfolio.js -->
+      </div>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <p class="empty-icon">⟨/⟩</p>
+        <p>No projects in this category yet.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA STRIP ================= -->
+  <section class="section cta-strip">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2 class="cta-title">Like what you see?</h2>
+          <p class="cta-sub">Let's talk about your next project.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Get in Touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="socials">
+        <a href="https://github.com/Jerry-Vic01" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/jeremiah-ewere-victor" target="_blank">LinkedIn</a>
+        <a href="mailto:jeremiahvictor920@gmail.com">Email</a>
+      </div>
+      <p>© <span id="year"></span> BitBrige Nexus — Built from code. Designed for Culture.</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

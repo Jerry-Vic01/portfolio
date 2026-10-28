@@ -1,0 +1,203 @@
+/* ============================================
+   SERVICES PAGE — EXTENDED STYLES
+   ============================================ */
+
+/* ---------- Page Header ---------- */
+.page-header {
+  padding: 90px 0 50px;
+  text-align: center;
+}
+
+/* ---------- Services Grid ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-bottom: 80px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 30px;
+  height: 100%;
+}
+
+/* Icon styling */
+.service-icon-wrap {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 12px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrap {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--primary);
+  box-shadow: var(--glow-blue);
+  transform: scale(1.05);
+}
+
+.service-icon {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--primary-soft);
+  line-height: 1;
+}
+
+.service-title {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.service-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  flex: 1; /* Pushes the features list to the bottom */
+}
+
+/* Feature list */
+.service-features {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.88rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.service-features li:last-child {
+  margin-bottom: 0;
+}
+
+.service-features li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* ---------- Process Section ---------- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  position: relative;
+}
+
+/* Connecting line behind the steps (desktop only) */
+@media (min-width: 900px) {
+  .process-grid::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
+    z-index: 0;
+    opacity: 0.4;
+  }
+}
+
+.process-step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.process-num {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--accent);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+  transition: all 0.3s ease;
+}
+
+.process-step:hover .process-num {
+  background: var(--surface-2);
+  border-color: var(--accent);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-3px);
+}
+
+.process-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.process-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- CTA Strip (shared) ---------- */
+.cta-strip { padding-bottom: 100px; }
+
+.cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 44px 46px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(34,211,238,0.06));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -60%; right: -20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 70%);
+  filter: blur(50px);
+}
+
+.cta-title {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.cta-sub { color: var(--text-muted); font-size: 0.95rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .services-grid { margin-bottom: 40px; }
+  .process-grid { gap: 40px; }
+  .cta-box { padding: 30px 24px; text-align: center; justify-content: center; }
+}

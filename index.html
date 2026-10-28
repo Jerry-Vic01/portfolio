@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitBrige Nexus — Built from code. Designed for Culture.</title>
+  <meta name="description" content="Jeremiah Ewere Victor — Software Engineer & Founder of BitBrige Nexus." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="BitBrige Nexus logo" class="logoimg" />
+        <!-- <div class="brand-text">
+          <span class="brand-name">BITBRIGE NEXUS</span>
+          <span class="brand-tagline">Connect · Build · Secure</span>
+        </div> -->
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-eyebrow">// Software Engineer · Founder</span>
+      <h1 class="hero-title">
+        Built from <span class="gradient">code</span>.<br />
+        Designed for <span class="gradient">culture</span>.
+      </h1>
+      <p class="hero-sub">
+        I'm <strong>Jeremiah Ewere Victor</strong> — a first-class Computer Science graduate
+        crafting clean, scalable digital experiences under the banner of <strong>BitBrige Nexus</strong>.
+      </p>
+      <div class="hero-cta">
+        <a href="portfolio.html" class="btn btn-primary">View Portfolio →</a>
+        <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= TECH STACK ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">// Tech Stack</p>
+        <h2 class="section-title">Tools I <span class="gradient">work with</span></h2>
+      </div>
+      <div class="tech-grid" id="tech-grid"><!-- filled by main.js --></div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PROJECTS ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">// Featured Work</p>
+        <h2 class="section-title">Selected <span class="gradient">projects</span></h2>
+      </div>
+      <div class="project-grid" id="featured-grid"><!-- filled by main.js --></div>
+      <div style="text-align:center; margin-top: 50px;">
+        <a href="portfolio.html" class="btn btn-ghost">See All Projects →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="socials">
+        <a href="https://github.com/Jerry-Vic01" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/jeremiah-ewere-victor" target="_blank">LinkedIn</a>
+        <a href="mailto:jeremiahvictor920@gmail.com">Email</a>
+      </div>
+      <p>© <span id="year"></span> BitBrige Nexus — Built from code. Designed for Culture.</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

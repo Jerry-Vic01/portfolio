@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — BitBrige Nexus</title>
+  <meta name="description" content="Get in touch with Jeremiah Ewere Victor for web development, database design, and technical consulting." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="BitBrige Nexus logo" />
+        <!-- <div class="brand-text">
+          <span class="brand-name">BITBRIGE NEXUS</span>
+          <span class="brand-tagline">Connect · Build · Secure</span>
+        </div> -->
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+
+      <button class="nav-toggle">MENU</button>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-eyebrow">// Contact</span>
+      <h1 class="hero-title">
+        Let's build <span class="gradient">something</span>
+      </h1>
+      <p class="hero-sub">
+        Have a project in mind, need a consultation, or just want to say hi? 
+        Drop me a message and I'll get back to you as soon as possible.
+      </p>
+    </div>
+  </header>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left Side: Contact Info -->
+        <div class="contact-info">
+          <h2 class="contact-title">Contact <span class="gradient">Information</span></h2>
+          <p class="contact-text">
+            I'm currently available for freelance work and open to new opportunities. 
+            Let's connect and discuss how I can help bring your ideas to life.
+          </p>
+
+          <div class="info-list">
+            
+            <a href="mailto:jeremiahvictor920@gmail.com" class="info-item">
+              <div class="info-icon">✉</div>
+              <div class="info-detail">
+                <span class="info-label">Email</span>
+                <span class="info-value">jeremiahvictor920@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+2348108662654" class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-detail">
+                <span class="info-label">Phone</span>
+                <span class="info-value">0810 866 2654</span>
+              </div>
+            </a>
+
+            <div class="info-item" style="cursor:default;">
+              <div class="info-icon">📍</div>
+              <div class="info-detail">
+                <span class="info-label">Location</span>
+                <span class="info-value">Asaba, Nigeria</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/Jerry-Vic01" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://linkedin.com/in/jeremiah-ewere-victor" target="_blank" class="social-btn">LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="contact-form-wrap card">
+          
+          <!-- 
+            FORMSPREE SETUP:
+            Replace "YOUR_FORM_ID" in the action attribute below with your actual Formspree ID.
+            (Sign up free at formspree.io, create a form, and copy the URL they give you).
+            Example: action="https://formspree.io/f/xbdnyzqw"
+          -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+            
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Send Message →
+            </button>
+            
+            <p class="form-note">* This form is secured via Formspree.</p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="socials">
+        <a href="https://github.com/Jerry-Vic01" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/jeremiah-ewere-victor" target="_blank">LinkedIn</a>
+        <a href="mailto:jeremiahvictor920@gmail.com">Email</a>
+      </div>
+      <p>© <span id="year"></span> BitBrige Nexus — Built from code. Designed for Culture.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
